@@ -64,10 +64,11 @@
 .main-content iframe {
   width: 100%;
   max-width: 560px;
+  max-height: 80vh;
   aspect-ratio: 16 / 9;
   height: auto;
   display: block;
   margin: 1.5rem auto;
   border: none;
+  border-radius: 0.4rem;
 }
-

@@ -56,9 +56,12 @@ plugins:
 exclude:
   - bin
 
+permalink: pretty
+
 collections:
   projects:
     output: true
+    permalink: /projects/:path/
   interests:
     output: true
-
+    permalink: /interests/:path/

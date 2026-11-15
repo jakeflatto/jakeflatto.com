@@ -1,0 +1,6 @@
+{% assign image = site.data.images[include.image] %}
+{% assign src = image.src | default: "footage_not_found.png" %}
+{% assign alt = image.alt | default: "Description missing" %}
+{% assign classes = include.classes | default: "zoomable" %}
+
+<img src="/assets/images/{{ src }}" alt="{{ alt }}" class="{{ classes }}">

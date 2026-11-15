@@ -1,0 +1,21 @@
+parasailing:
+  src: jake_parasailing.jpg
+  alt: "Jake Parasailing in Cabo"
+babyface:
+  src: jake_babyface.jpg
+  alt: Jake with a cute baby face
+scream-singing:
+  src: jake_singing.jpg
+  alt: Jake scream singing his heart out
+dd-logo:
+  src: dylan_davies_logo.png
+  alt: "Dylan Davies logo"
+dd-cover:
+  src: dylan_davies_cover_photo.png
+  alt: "Dylan Davies in the wild"
+dd-album-cover:
+  src: dylan_davies_album_cover.jpg
+  alt: "Where We're Going, We Don't Need Roads (Album Cover)"
+dd-ep-cover:
+  src: dylan_davies_ep_cover.jpg
+  alt: "Where We're Going... (Album Cover)"

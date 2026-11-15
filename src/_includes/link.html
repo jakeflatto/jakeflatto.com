@@ -1,0 +1,4 @@
+{%- assign href = include.href | default: "#0" -%}
+{%- assign text = include.text | default: "Link" -%}
+{%- assign target = include.target | default: "self" -%}
+<a target="_{{ target }}" href="{{ href }}" {% if target == "blank" %}rel="noopener noreferrer"{% endif %}>{{ text }}</a>

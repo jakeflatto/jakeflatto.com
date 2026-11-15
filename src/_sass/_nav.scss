@@ -1,6 +1,11 @@
 /* Position header relatively so the menu anchors to the top-right corner */
 .page-header {
   position: relative;
+
+  /* Reserve vertical space above the centered title on mobile/tablet so .site-nav never overlaps */
+  @media (max-width: 768px) {
+    padding-top: 4.25rem;
+  }  
 }
 
 .site-nav {

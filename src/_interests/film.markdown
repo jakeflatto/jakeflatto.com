@@ -8,3 +8,4 @@ image: /assets/images/inglourious_basterds.jpg
 </div>
 
 It's the film page! Content coming soon.
+{% include footage-not-found.html %}

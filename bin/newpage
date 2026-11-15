@@ -121,6 +121,7 @@ title: ${cap_title}
 </div>
 
 It's the ${lower_title} page! Content coming soon.
+{% include footage-not-found.html %}
 EOF
 
 echo "Created: $file_path"

@@ -1,0 +1,8 @@
+/* Make current-page breadcrumb (#0) look and act like plain text */
+a[href="#0"] {
+  color: $body-text-color;
+  text-decoration: none;
+  pointer-events: none;
+  cursor: default;
+  font-weight: bold;
+}

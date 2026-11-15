@@ -7,3 +7,4 @@ title: Lie Algebras
 </div>
 
 It's the lie algebras page! Content coming soon.
+{% include footage-not-found.html %}

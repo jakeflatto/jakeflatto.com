@@ -1,6 +1,7 @@
 ---
 title:  "Blog, i guess"
 description: Disclaimer - contains less legal advice than the Bob Loblaw Law Blog
+permalink: /blog/
 ---
 <div>
   <a href="/">Home</a> > <a href="#0">Blog, i guess</a>
@@ -16,9 +17,7 @@ Definitely not at the bottom of this or any other page.
 
 **Posts**
 {% if site.posts.size == 0 %}
-<div class="img-container">
-  <img src="/assets/images/footage_not_found.png" alt="Footage not found">
-</div>
+{% include footage-not-found.html %}
 {% else %}
 <ul>
   {% for post in site.posts %}

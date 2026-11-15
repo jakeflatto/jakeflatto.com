@@ -8,7 +8,9 @@
 
 // 3. Load modular component partials (all have access to your variables)
 @import "buttons";
+@import "lightbox";
 @import "media";
 @import "social";
 @import "age-gate";
-
+@import "breadcrumbs";
+@import "nav";

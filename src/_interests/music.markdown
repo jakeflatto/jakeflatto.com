@@ -8,3 +8,4 @@ image: /assets/images/beautiful_guitar.jpg
 </div>
 
 It's the music page! Content coming soon.
+{% include footage-not-found.html %}

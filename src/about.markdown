@@ -1,15 +1,15 @@
 ---
 title: About Me
-description: Learn it all! Then take the quiz for a small fee
+description: Learn it all! Then take the quiz for only a small fee.
 permalink: /about/
 ---
 <div>
   <a href="/">Home</a> > <a href="#0">About Me</a>
 </div>
 <div class="img-container">
-  <img src="/assets/images/jake_parasailing.jpg" alt="Jake Parasailing in Cabo">
-  <img src="/assets/images/jake_babyface.jpg" alt="Jake with a cute baby face">
-  <img src="/assets/images/jake_singing.jpg" alt="Jake scream singing his heart out">
+  <img src="/assets/images/jake_parasailing.jpg" alt="Jake Parasailing in Cabo" class="zoomable">
+  <img src="/assets/images/jake_babyface.jpg" alt="Jake with a cute baby face" class="zoomable">
+  <img src="/assets/images/jake_singing.jpg" alt="Jake scream singing his heart out" class="zoomable">
 </div>
 
 There's lots to know about me! Below I've concisely answered only the most important questions so you can learn quickly.

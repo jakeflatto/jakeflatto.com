@@ -8,3 +8,4 @@ image: /assets/images/cinque_terre.jpg
 </div>
 
 It's the travel page! Content coming soon.
+{% include footage-not-found.html %}

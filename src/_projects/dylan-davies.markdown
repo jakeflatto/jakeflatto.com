@@ -8,8 +8,8 @@ image: /assets/images/dylan_davies_logo.png
 </div>
 
 <div class="img-container">
-  <img src="/assets/images/dylan_davies_logo.png" alt="Dylan Davies logo!">
-  <img src="/assets/images/dylan_davies_cover_photo.png" alt="Dylan Davies in the wild!">
+  <img src="/assets/images/dylan_davies_logo.png" alt="Dylan Davies logo!" class="zoomable">
+  <img src="/assets/images/dylan_davies_cover_photo.png" alt="Dylan Davies in the wild!" class="zoomable">
 </div>
 
 {% include social-group.html prefix="dd_" %}
@@ -23,12 +23,12 @@ From my actual name! My full name is Jacob Dylan Davies Flatto,
 and I just liked the sound and alliteration of my middle names as a stage name.
 
 ## What am I working on?
-Along with the help of my excellently talented Producer, Caleb Green, I'm recording a 14-song album that I began writing when I was 18 years old,
+Along with the help of my excellently talented Producer, <a href="https://www.instagram.com/caleb.d.green" target="_blank">Caleb Green</a>, I'm recording a 14-song album that I began writing when I was 18 years old,
 entitled:  
 **Where We're Going, We Don't Need Roads**
 
 <div class="img-container">
-  <img src="/assets/images/dylan_davies_album_cover.jpg" class="large">
+  <img src="/assets/images/dylan_davies_album_cover.jpg" alt="Where We're Going, We Don't Need Roads (Album Cover)" class="large zoomable">
 </div>
 
 Early in 2026, I released a 3-song EP as a sort of preview for the album,
@@ -36,7 +36,7 @@ entitled: **Where We're Going...**
 It's comprised of stripped-down, acoustic versions of 3 of the 14 songs from the full album.
 
 <div class="img-container">
-  <img src="/assets/images/dylan_davies_ep_cover.jpg" class="large">
+  <img src="/assets/images/dylan_davies_ep_cover.jpg" alt="Where We're Going (Album Cover)" class="large zoomable">
 </div>
 
 

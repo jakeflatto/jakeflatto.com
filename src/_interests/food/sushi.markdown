@@ -8,3 +8,4 @@ image: /assets/images/gilted_sushi.jpg
 </div>
 
 It's the sushi page! Content coming soon.
+{% include footage-not-found.html %}

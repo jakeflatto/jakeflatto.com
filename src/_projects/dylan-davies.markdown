@@ -23,7 +23,7 @@ From my actual name! My full name is Jacob Dylan Davies Flatto,
 and I just liked the sound and alliteration of my middle names as a stage name.
 
 ## What am I working on?
-I'm currently producing a 14-song album that I began writing when I was 18 years old,
+Along with the help of my excellently talented Producer, Caleb Green, I'm recording a 14-song album that I began writing when I was 18 years old,
 entitled:  
 **Where We're Going, We Don't Need Roads**
 

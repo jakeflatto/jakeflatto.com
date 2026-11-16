@@ -28,32 +28,34 @@
 
       {% unless resolved_description %}
         {% assign all_docs = site.pages | concat: site.documents %}
-        {% assign url_segments = page.url | remove: ".html" | split: "/" %}
-        {% assign depth = url_segments.size | minus: 1 %}
+        {% assign clean_page_url = page.url | remove: ".html" | append: "/" | replace: "//", "/" %}
+        {% assign url_segments = clean_page_url | split: "/" %}
+        {% assign max_depth = url_segments.size | minus: 2 %}
 
-        {% for i in (1..depth) reversed %}
-          {% assign parent_path = "" %}
-          {% for j in (1..i) %}
-            {% assign seg = url_segments[j] %}
-            {% if seg != "" %}
-              {% assign parent_path = parent_path | append: "/" | append: seg %}
-            {% endif %}
-          {% endfor %}
+        {% if max_depth >= 1 %}
+          {% for i in (1..max_depth) reversed %}
+            {% assign parent_path = "" %}
+            {% for j in (1..i) %}
+              {% assign seg = url_segments[j] %}
+              {% if seg != "" %}
+                {% assign parent_path = parent_path | append: "/" | append: seg %}
+              {% endif %}
+            {% endfor %}
+            {% assign parent_path = parent_path | append: "/" %}
 
-          {% if parent_path != "" and parent_path != page.url %}
             {% for doc in all_docs %}
-              {% assign doc_clean_url = doc.url | remove: ".html" | remove_last: "/" %}
-              {% if doc_clean_url == parent_path and doc.description %}
+              {% assign doc_url = doc.url | remove: ".html" | append: "/" | replace: "//", "/" %}
+              {% if doc_url == parent_path and doc.description %}
                 {% assign resolved_description = doc.description %}
                 {% break %}
               {% endif %}
             {% endfor %}
-          {% endif %}
 
-          {% if resolved_description %}
-            {% break %}
-          {% endif %}
-        {% endfor %}
+            {% if resolved_description %}
+              {% break %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
       {% endunless %}
 
       <h2 class="project-tagline">{{ resolved_description | default: site.description | default: site.github.project_tagline }}</h2>

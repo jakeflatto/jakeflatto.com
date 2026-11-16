@@ -37,15 +37,14 @@
 }
 
 
-/* Home Page Button Group (2x2 grid on desktop/tablet, 1x4 stacked on mobile) */
+/* Home Page Button Group (2x2 grid on desktop/tablet, 1x4 stacked on mobile, flush with text container) */
 .container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: clamp(0.75rem, 2vw, 1.25rem);
   width: 100%;
-  max-width: 760px;
   box-sizing: border-box;
-  margin: clamp(1rem, 3vw, 1.5625rem) auto;
+  margin-block: clamp(1rem, 3vw, 1.5625rem);
 
   .custom-btn {
     display: flex;
@@ -57,17 +56,18 @@
 
   @media (max-width: 600px) {
     grid-template-columns: 1fr;
-    max-width: 360px;
     gap: 0.75rem;
   }
 }
 
-/* 3-Column Collection Grid (3 -> 2 -> 1 columns) */
+/* 3-Column Collection Grid (3 -> 2 -> 1 columns, flush with text container) */
 .button-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: clamp(0.65rem, 2vw, 1rem);
-  margin: 1.5rem 0;
+  width: 100%;
+  box-sizing: border-box;
+  margin-block: 1.5rem;
 
   @media (max-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
@@ -75,8 +75,6 @@
 
   @media (max-width: 480px) {
     grid-template-columns: 1fr;
-    max-width: 340px;
-    margin-inline: auto;
   }
 }
 

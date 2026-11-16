@@ -7,11 +7,8 @@ description: Software Engineer. Musician. Certified Goofball.
   {% include image.html image="purple-headshot" %}
 </div>
 
-<div>
-After 5 years of Software Engineering, 
-I figured it's about damn time I had a personal website. 
-Learn about me and my many, varied interests as well as my silly, little projects below!
-</div>
+### Explore my digital corner of the world for a mix of journaling, project portfolio-ing, and of course, some jokes.
+{:.text-purple}
 
 <div class="container">
   <a class="custom-btn" href="/about">About Me<br> &#128064;</a>
@@ -19,4 +16,3 @@ Learn about me and my many, varied interests as well as my silly, little project
   <a class="custom-btn" href="/interests">My Many, Varied Interests<br> &#127925; &#129518; &#127909;</a>
   <a class="custom-btn" href="/projects">My Silly, Little Projects<br> &#128520; &#127789; &#127928;</a>
 </div>
-

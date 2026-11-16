@@ -1,10 +1,10 @@
 ---
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
+description: Software Engineer. Musician. Certified Goofball.
 ---
 <div class="img-container">
-  <img src="/assets/images/jake_purple_headshot.jpg" alt="Jake's Face">
+  {% include image.html image="purple-headshot" %}
 </div>
 
 <div>

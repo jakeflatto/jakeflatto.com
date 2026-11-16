@@ -1,23 +1,41 @@
-/* Standalone Action Button */
+/* Standalone & Homepage Action Button */
 .custom-btn {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
   display: inline-block;
   padding: clamp(0.45rem, 1.5vw, 0.6rem) clamp(0.9rem, 2.5vw, 1.2rem);
   color: $header-bg-color;
   background-color: transparent;
-  border: 1px solid $header-bg-color;
+  border: 2px solid $header-bg-color;
   border-radius: 0.3rem;
   text-decoration: none;
   font-size: clamp(1rem, 2.5vw, 1.375rem);
   font-weight: bold;
   text-align: center;
-  transition: background-color 0.2s, color 0.2s;
+  transition: color 0.25s ease, border-color 0.25s ease;
+
+  /* Gradient layer starts hidden and fades in smoothly on hover */
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, $header-bg-color 0%, $header-bg-color-secondary 100%);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    z-index: -1;
+  }
 
   &:hover {
     color: #ffffff;
-    background-color: $header-bg-color;
     text-decoration: none;
+
+    &::before {
+      opacity: 1;
+    }
   }
 }
+
 
 /* Home Page Button Group (2x2 grid on desktop/tablet, 1x4 stacked on mobile) */
 .container {
@@ -62,7 +80,7 @@
   }
 }
 
-/* Square Grid Buttons (Supports both solid teal and cover image backgrounds) */
+/* Square Grid Buttons (Supports both smooth-fading gradient and cover image backgrounds) */
 .grid-btn {
   position: relative;
   overflow: hidden;
@@ -76,22 +94,36 @@
   text-align: center;
   word-break: break-word;
   color: #ffffff;
-  background-color: $header-bg-color;
+  background-color: transparent;
   border: 2px solid $header-bg-color;
   border-radius: 0.8rem;
   text-decoration: none;
   font-weight: bold;
-  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+  transition: color 0.25s ease, border-color 0.25s ease;
 
   .grid-btn-label {
     position: relative;
     z-index: 2;
   }
 
+  /* Gradient layer for standard buttons (fades out smoothly via opacity on hover) */
+  &:not(.has-cover)::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, $header-bg-color 0%, $header-bg-color-secondary 100%);
+    opacity: 1;
+    transition: opacity 0.25s ease;
+    z-index: 0;
+  }
+
   &:hover {
     color: $header-bg-color;
-    background-color: transparent;
     text-decoration: none;
+
+    &:not(.has-cover)::before {
+      opacity: 0;
+    }
   }
 
   /* Cover Image Variant */
@@ -133,4 +165,3 @@
     }
   }
 }
-

@@ -1,3 +1,6 @@
+purple-headshot:
+  src: jake_purple_headshot.jpg
+  alt: "Jake's face with purple hair and beard"
 parasailing:
   src: jake_parasailing.jpg
   alt: "Jake Parasailing in Cabo"
@@ -19,3 +22,9 @@ dd-album-cover:
 dd-ep-cover:
   src: dylan_davies_ep_cover.jpg
   alt: "Where We're Going... (Album Cover)"
+hhdc-logo:
+  src: hhdc_logo.jpg
+  alt: "HHDC logo"
+tos-cover:
+  src: theory_of_solids_cover_photo.jpg
+  alt: "Theory of Solids in action"

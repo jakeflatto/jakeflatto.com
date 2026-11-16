@@ -46,12 +46,12 @@ So far, I've only been to a handful:
 - Italy 
 - Prussia (I went through a time-traveling phase that I don't like to talk about).  
 
-I may not know where I'm going, but I do know that **Where We're Going, We Don't Need Roads**
-(album by <a href="/projects/dylan-davies/">Dylan Davies</a>, coming soon to a streaming service near you -
-stream the EP now on 
-{% include link.html href=site.data.links.dd_ep_spotify text="Spotify" target="blank" %}, 
-{% include link.html href=site.data.links.dd_ep_tidal text="Tidal" target="blank" %}, 
-{% include link.html href=site.data.links.dd_ep_apple_music text="Apple Music" target="blank" %}).
+I may not know where I'm going, but I do know that **Where We're Going, We Don't Need Roads** (album by 
+[Dylan Davies](/projects/dylan-davies/), 
+coming soon to a streaming service near you - stream the EP now on 
+[Spotify]({{ site.data.links.dd_ep_spotify }}){:target="_blank"},
+[Tidal]({{ site.data.links.dd_ep_tidal }}){:target="_blank"},
+[Apple Music]({{ site.data.links.dd_ep_apple_music}}){:target="_blank"}).
 
 ## What am I doing?
 Oh wow, I find myself asking this question every day.
@@ -67,7 +67,7 @@ to eating great food,
 to playing video games where you hit a ball with a rocket-powered car.
 
 To find out about the more interesting things that I'm doing, check out
-<a href="/projects"> my silly little projects</a>.
+[my silly little projects](/projects/).
 
 ## What is the airspeed velocity of an unladen swallow?
 African or European?

@@ -9,7 +9,7 @@ image: /assets/images/tos_logo.jpg
 
 
 <div class="img-container">
-  <img src="/assets/images/theory_of_solids_cover_photo.jpg" alt="Theory of Solids in action!" class="large zoomable">
+  {% include image.html image="tos-cover" classes="large zoomable" %}
 </div>
 
 {% include social-group.html prefix="tos_" %}
@@ -19,9 +19,12 @@ Theory of Solids is the name of my rock band! We play almost entirely original m
 but we're sure to throw in a few crowd-pleasing covers at any given show.
 
 ## Who are we?
-I co-founded the band with <a href="https://www.instagram.com/plaidbeardthepirate" target="_blank">Stefan Schwartz</a>,
+I co-founded the band with
+[Stefan Schwartz]({{ site.data.links.stefan_ig }}){:target="_blank"}, 
 unofficially in about 2010, and officially in about 2019.
-We, and our third member, <a href="https://www.instagram.com/quads_frow_days" target="_blank">Toma&#769;s Arias</a>, provide guitar, bass, and vocals.
+We, and our third member, 
+[Toma&#769;s Arias]({{ site.data.links.tomas_ig }}){:target="_blank"}, 
+provide guitar, bass, and vocals.
 But we are currently seeking a drummer and more guitarists/bassists.
 So if you or anyone you know are interested in joining us, please reach out!
 

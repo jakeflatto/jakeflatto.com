@@ -9,7 +9,7 @@ age_restricted: true
 </div>
 
 <div class="img-container">
-  <img src="/assets/images/hhdc_logo.jpg" class="large">
+  {% include image.html image="hhdc-logo" classes="large" %}
 </div>
 
 ## What the heck is it?  
@@ -38,6 +38,6 @@ So if you like the cause, or you just like weiner jokes, please check it out!
 And by all means, feel free to drop a request for a review of your favorite film!
 
 ## Warning  
-NSFW content ahead, marked as such for being s\*xually sugg\*stive. Proceed at your own risk!
+NSFW content ahead, marked as such for containing s\*xually sugg\*stive text. Proceed at your own risk!
 
 {% include social-group.html prefix="hhdc_" %}

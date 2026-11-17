@@ -27,6 +27,15 @@
     );
     pointer-events: none;
     z-index: 0;
+
+    @media (max-width: 768px) {
+      background: linear-gradient(
+        180deg,
+        rgba(10, 15, 25, 0.82) 0%,
+        rgba(10, 15, 25, 0.15) 45%,
+        rgba(10, 15, 25, 0.85) 100%
+      );
+    }
   }
 }
 
@@ -42,8 +51,10 @@
   gap: 2rem 3rem;
 
   @media (max-width: 768px) {
+    flex: 1 0 auto;
     grid-template-columns: 1fr;
-    gap: 1.75rem;
+    align-content: space-between;
+    gap: 2rem;
   }
 }
 

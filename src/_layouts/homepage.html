@@ -38,7 +38,7 @@
 
           <div class="hero-footer-row">
             <span class="hero-credits">
-              © {{ 'now' | date: '%Y' }} {{ site.title }} · Powered by <a href="https://github.com">GitHub Pages</a> and <a href="https://jekyllrb.com">Jekyll</a>
+              © {{ 'now' | date: '%Y' }} {{ site.title }} · Powered by {% include link.html name="gh_pages" target="blank" text="GitHub Pages"%} and {% include link.html name="jekyll" target="blank" text="Jekyll"%}
             </span>
           </div>
         </div>

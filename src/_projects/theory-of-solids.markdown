@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Theory Of Solids
+title: Theory of Solids
 image: /assets/images/tos_logo.jpg
 ---
 <div class="img-container">
@@ -22,6 +22,9 @@ We, and our third member,
 provide guitar, bass, and vocals.
 But we are currently seeking a drummer and more guitarists/bassists.
 So if you or anyone you know are interested in joining us, please reach out!
+
+## Where did we get the name from?
+All credit to Stefan for the brilliant, if non-optimal-for-SEO, pun. It comes from a concept in physics: [the band theory of solids]({{ site.data.links.tos_name_origin }}) (WARNING: SCIENCE AHEAD).
 
 ## What kind of music do we play?
 We describe ourselves as playing rock across the spectrum, 

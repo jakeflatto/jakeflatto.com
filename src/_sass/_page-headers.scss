@@ -1,0 +1,11 @@
+.main-content .page-body-title {
+  margin-top: 1rem;
+  margin-bottom: 0.35rem;
+  margin-left: -2px; /* Optical alignment for large heading glyph side-bearing */
+}
+
+.main-content .page-body-description {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  color: $header-bg-color-secondary
+}

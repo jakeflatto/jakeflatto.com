@@ -12,7 +12,7 @@ it allows me to broadcast ideas without the use of traditional social media.
 And you certainly won't find any references to traditional social media anywhere on my site.
 Definitely not at the bottom of this or any other page.
 
-**Posts**
+## Posts
 {% if site.posts.size == 0 %}
 {% include footage-not-found.html %}
 {% else %}

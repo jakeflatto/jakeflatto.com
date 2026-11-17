@@ -1,0 +1,40 @@
+      {% unless page.url == "/" or page.url == "/index.html" %}
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="{{ '/' | relative_url }}">Home</a>
+          {% assign crumbs = page.url | remove: ".html" | split: "/" %}
+          {% assign crumb_path = "" %}
+          {% for crumb in crumbs %}
+            {% if crumb != "" %}
+              {% assign crumb_path = crumb_path | append: "/" | append: crumb %}
+
+              {%- comment -%} Build Title-Cased fallback from URL slug {%- endcomment -%}
+              {% assign slug_words = crumb | split: "-" %}
+              {% assign fallback_title = "" %}
+              {% for word in slug_words %}
+                {% assign cap_word = word | capitalize %}
+                {% assign fallback_title = fallback_title | append: " " | append: cap_word %}
+              {% endfor %}
+              {% assign fallback_title = fallback_title | strip %}
+
+              {% if forloop.last %}
+                <span style="color: #048c8c">&#9658;</span> <span>{{ page.breadcrumb | default: page.title | default: fallback_title }}</span>
+              {% else %}
+                {% assign parent_url = crumb_path | append: "/" %}
+                {% assign all_docs = site.pages | concat: site.documents %}
+                {% assign parent_title = fallback_title %}
+                {% for doc in all_docs %}
+                  {% assign doc_url = doc.url | remove: ".html" | append: "/" | replace: "//", "/" %}
+                  {% if doc_url == parent_url %}
+                    {% assign custom_label = doc.breadcrumb | default: doc.title %}
+                    {% if custom_label %}
+                      {% assign parent_title = custom_label %}
+                    {% endif %}
+                    {% break %}
+                  {% endif %}
+                {% endfor %}
+                <span style="color: #048c8c">&#9658;</span> <a href="{{ parent_url | relative_url }}">{{ parent_title }}</a>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        </nav>
+      {% endunless %}

@@ -1,18 +1,17 @@
 ---
 layout: default
 title: Dylan Davies
+description: sad boi alt rock, but make it weirdly orchestral
 image: /assets/images/dylan_davies_logo.png
 ---
 <div class="img-container">
   {% include image.html image="dd-logo" classes="zoomable" %}
-  {% include image.html image="dd-cover" classes="zoomable" %}
 </div>
 
 {% include social-group.html prefix="dd_" %}
 
 ## What is it?
 Dylan Davies is the name of my solo music project. 
-I describe it as "sad boi alt rock, but make it weirdly orchestral."
 
 ## Where did I get the name from?
 From my actual name! My full name is Jacob Dylan Davies Flatto, 

@@ -52,7 +52,11 @@
     border-bottom: 2px solid transparent;
     transition: color 0.2s, border-color 0.2s;
 
-    &:hover,
+    &:hover {
+      color: $header-bg-color;
+      border-bottom-color: $header-bg-color;
+      text-decoration: none;
+    }
     &.active {
       color: #ffffff;
       border-bottom-color: #ffffff;

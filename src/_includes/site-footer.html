@@ -2,7 +2,7 @@
   <div class="site-footer-inner">
     {% include social-group.html footer=true %}
     <span class="site-footer-credits">
-      © {{ 'now' | date: '%Y' }} {{ site.title }} · Powered by <a href="https://github.com">GitHub Pages</a>
+      © {{ 'now' | date: '%Y' }} {{ site.title }} · Powered by {% include link.html name="gh_pages" target="blank" text="GitHub Pages"%} and {% include link.html name="jekyll" target="blank" text="Jekyll"%}
     </span>
   </div>
 </footer>

@@ -2,6 +2,7 @@
 title: About Me
 description: Learn it all! Then take the quiz for only a small fee.
 permalink: /about/
+breadcrumb: "About"
 ---
 <div class="img-container">
   {% include image.html image="parasailing" classes="zoomable" %}
@@ -64,7 +65,7 @@ to eating great food,
 to playing video games where you hit a ball with a rocket-powered car.
 
 To find out about the more interesting things that I'm doing, check out
-[my silly little projects](/projects/).
+[my silly, little projects](/projects/).
 
 ## What is the airspeed velocity of an unladen swallow?
 African or European?

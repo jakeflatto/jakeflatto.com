@@ -22,7 +22,6 @@ body {
 
 /* Slim Site Footer aligned with .main-content */
 .site-footer {
-  margin-top: clamp(2rem, 5vw, 3.5rem);
   padding-block: 0.75rem;
   padding-inline: 0;
   color: $header-heading-color;
@@ -75,6 +74,7 @@ body {
 
     &:hover {
       opacity: 0.85;
+      color: $header-bg-color;
     }
   }
 }

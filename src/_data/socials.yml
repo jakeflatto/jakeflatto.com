@@ -1,11 +1,11 @@
 # Site-wide footer accounts
-linkedin:
-  platform: linkedin
-  url: https://linkedin.com/in/jakeflatto/
-  footer: true
 instagram:
   platform: instagram
   url: https://instagram.com/flying.purple.sushi.eater/
+  footer: true
+linkedin:
+  platform: linkedin
+  url: https://linkedin.com/in/jakeflatto/
   footer: true
 github:
   platform: github

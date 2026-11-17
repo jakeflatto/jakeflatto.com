@@ -14,7 +14,7 @@
   background-repeat: no-repeat;
   color: #ffffff;
 
-  /* Bottom-weighted gradient scrim with pointer-events: none so links remain clickable */
+  /* Gradient scrim with pointer-events: none so links remain clickable */
   &::before {
     content: "";
     position: absolute;
@@ -39,7 +39,7 @@
   }
 }
 
-/* Full-Width Two-Column Bottom Layout (Left: Identity | Right: Nav + Socials) */
+/* Full-Width Two-Column Bottom Layout (Left: Identity | Right: Nav + Credits) */
 .hero-bottom-grid {
   position: relative;
   z-index: 2;
@@ -58,7 +58,7 @@
   }
 }
 
-/* Bottom-Left Identity Column (Explicitly stacked vertically) */
+/* Bottom-Left Identity Column */
 .hero-identity {
   grid-column: 1;
   display: flex;
@@ -76,18 +76,19 @@
 
     a {
       color: rgba(255, 255, 255, 0.88);
-
-      &:hover {
-        color: $header-bg-color;
-      }
     }
   }
 }
 
-.hero-name {
+.hero-name,
+.hero-tagline,
+.hero-bio {
   display: block;
   width: 100%;
   margin: 0;
+}
+
+.hero-name {
   padding-left: 2px; /* Optical alignment for large 'J' glyph side-bearing */
   color: #ffffff;
   font-size: clamp(2.1rem, 4.5vw, 3.25rem);
@@ -97,9 +98,6 @@
 }
 
 .hero-tagline {
-  display: block;
-  width: 100%;
-  margin: 0;
   color: rgba(255, 255, 255, 0.95);
   font-size: clamp(1.1rem, 2.2vw, 1.35rem);
   font-weight: 600;
@@ -107,9 +105,6 @@
 }
 
 .hero-bio {
-  display: block;
-  width: 100%;
-
   p {
     margin: 0;
     color: rgba(255, 255, 255, 0.88);
@@ -122,11 +117,9 @@
   }
 }
 
-/* Bottom-Right Navigation, Socials & Credits Column */
+/* Bottom-Right Navigation & Credits Column */
 .hero-links-column {
   grid-column: 2;
-  position: relative;
-  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -139,16 +132,20 @@
   }
 }
 
-.hero-footer-row {
+.hero-footer-row,
+.hero-nav {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
   flex-wrap: wrap;
-  gap: 0.65rem 1.25rem;
+  justify-content: flex-end;
 
   @media (max-width: 768px) {
     justify-content: flex-start;
   }
+}
+
+.hero-footer-row {
+  gap: 0.65rem 1.25rem;
 }
 
 .hero-credits {
@@ -160,23 +157,11 @@
     color: rgba(255, 255, 255, 0.92);
     font-weight: 600;
     text-decoration: underline;
-
-    &:hover {
-      color: $header-bg-color;
-    }
   }
 }
 
 .hero-nav {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: flex-end;
   gap: clamp(0.9rem, 2.2vw, 1.6rem);
-
-  @media (max-width: 768px) {
-    justify-content: flex-start;
-  }
 
   a {
     color: rgba(255, 255, 255, 0.92);
@@ -189,9 +174,40 @@
     transition: color 0.2s, border-color 0.2s;
 
     &:hover {
-      color: $header-bg-color;
       border-bottom-color: $header-bg-color;
       text-decoration: none;
+    }
+  }
+}
+
+/* Shared Teal Hover Accent Across All Homepage Links */
+.hero-identity .social-links a:hover,
+.hero-credits a:hover,
+.hero-nav a:hover {
+  color: $header-bg-color;
+}
+
+/* Staggered Entrance Animation for Homepage Content */
+$hero-stagger-items: (
+  ".hero-name",
+  ".hero-tagline",
+  ".hero-bio",
+  ".hero-identity .social-links",
+  ".hero-nav",
+  ".hero-footer-row"
+);
+
+.layout-homepage {
+  @for $i from 1 through length($hero-stagger-items) {
+    #{nth($hero-stagger-items, $i)} {
+      opacity: 0;
+      animation: cascadeReveal 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+      animation-delay: #{0.1 + ($i - 1) * 0.12}s;
+
+      @media (prefers-reduced-motion: reduce) {
+        opacity: 1;
+        animation: none;
+      }
     }
   }
 }

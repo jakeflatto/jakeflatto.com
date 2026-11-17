@@ -3,11 +3,6 @@ layout: default
 title: Theory Of Solids
 image: /assets/images/tos_logo.jpg
 ---
-<div>
-  <a href="/">Home</a> > <a href="/projects">Projects</a> > <a href="#0">Theory Of Solids</a>
-</div>
-
-
 <div class="img-container">
   {% include image.html image="tos-cover" classes="large zoomable" %}
 </div>

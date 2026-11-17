@@ -3,9 +3,6 @@ title:  "Blog, i guess"
 description: Disclaimer - contains less legal advice than the Bob Loblaw Law Blog
 permalink: /blog/
 ---
-<div>
-  <a href="/">Home</a> > <a href="#0">Blog, i guess</a>
-</div>
 What's a personal website without a Blog, i guess? 
 
 No idea how often I will actually intend to post here. 

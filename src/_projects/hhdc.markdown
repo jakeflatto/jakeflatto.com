@@ -4,10 +4,6 @@ title: HHDC
 image: /assets/images/hhdc_logo.jpg
 age_restricted: true
 ---
-<div>
-  <a href="/">Home</a> > <a href="/projects">Projects</a> > <a href="#0">HHDC</a>
-</div>
-
 <div class="img-container">
   {% include image.html image="hhdc-logo" classes="large" %}
 </div>

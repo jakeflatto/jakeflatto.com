@@ -3,9 +3,6 @@ title: About Me
 description: Learn it all! Then take the quiz for only a small fee.
 permalink: /about/
 ---
-<div>
-  <a href="/">Home</a> > <a href="#0">About Me</a>
-</div>
 <div class="img-container">
   {% include image.html image="parasailing" classes="zoomable" %}
   {% include image.html image="babyface" classes="zoomable" %}

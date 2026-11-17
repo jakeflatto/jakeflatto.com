@@ -4,10 +4,6 @@ title: Food
 description: Restaurants, recipes, and culinary adventures
 image: /assets/images/uni_rice.jpg
 ---
-<div>
-  <a href="/">Home</a> > <a href="/interests">Interests</a> > <a href="#0">Food</a>
-</div>
-
 My number two priority in life (behind <a href="/interests/comedy">commitment to the bit</a>) is finding the perfect hot dog.
 But I would say more generally, I'm quite passionate about food.
 

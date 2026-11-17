@@ -3,10 +3,6 @@ layout: default
 title: Dylan Davies
 image: /assets/images/dylan_davies_logo.png
 ---
-<div>
-  <a href="/">Home</a> > <a href="/projects">Projects</a> > <a href="#0">Dylan Davies</a>
-</div>
-
 <div class="img-container">
   {% include image.html image="dd-logo" classes="zoomable" %}
   {% include image.html image="dd-cover" classes="zoomable" %}

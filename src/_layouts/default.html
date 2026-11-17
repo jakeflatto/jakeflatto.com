@@ -17,10 +17,39 @@
 
     {% include site-header.html %}
 
-    <main id="content" class="main-content" role="main">
+    <main id="content" class="main-content page-animate-in" role="main">
+      {% unless page.url == "/" or page.url == "/index.html" %}
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="{{ '/' | relative_url }}">Home</a>
+          {% assign crumbs = page.url | remove: ".html" | split: "/" %}
+          {% assign crumb_path = "" %}
+          {% for crumb in crumbs %}
+            {% if crumb != "" %}
+              {% assign crumb_path = crumb_path | append: "/" | append: crumb %}
+              {% if forloop.last %}
+                &gt; <span>{{ page.title | default: crumb | replace: "-", " " | capitalize }}</span>
+              {% else %}
+                {% assign parent_url = crumb_path | append: "/" %}
+                {% assign all_docs = site.pages | concat: site.documents %}
+                {% assign parent_title = crumb | replace: "-", " " | capitalize %}
+                {% for doc in all_docs %}
+                  {% assign doc_url = doc.url | remove: ".html" | append: "/" | replace: "//", "/" %}
+                  {% if doc_url == parent_url and doc.title %}
+                    {% assign parent_title = doc.title %}
+                    {% break %}
+                  {% endif %}
+                {% endfor %}
+                &gt; <a href="{{ parent_url | relative_url }}">{{ parent_title }}</a>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        </nav>
+      {% endunless %}
+
       {% if page.title %}
         <h1 class="page-body-title">{{ page.title }}</h1>
       {% endif %}
+
       {{ content }}
     </main>
 

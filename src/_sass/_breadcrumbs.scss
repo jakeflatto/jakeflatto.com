@@ -6,3 +6,28 @@ a[href="#0"] {
   cursor: default;
   font-weight: bold;
 }
+
+/* Tighten top padding between slim header and breadcrumbs */
+.main-content {
+  padding-top: 1.15rem;
+
+  @media (max-width: 42em) {
+    padding-top: 0.9rem;
+  }
+}
+
+/* Breadcrumb Spacing Above Page Title */
+.breadcrumbs {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  color: $body-text-color;
+
+  span {
+    color: $body-text-color;
+  }
+}
+
+.page-body-title {
+  margin-top: 0;
+}

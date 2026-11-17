@@ -1,16 +1,72 @@
+/* Sticky Bottom Footer Layout */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page-header,
 .site-footer {
-  padding: clamp(1.75rem, 4vw, 2.75rem) 1rem;
+  flex-shrink: 0;
+}
+
+.main-content {
+  flex: 1 0 auto;
+  width: 100%;
+}
+
+/* Slim Site Footer aligned with .main-content */
+.site-footer {
+  margin-top: clamp(2rem, 5vw, 3.5rem);
+  padding-block: 0.75rem;
+  padding-inline: 0;
   color: $header-heading-color;
-  text-align: center;
   background-color: $header-bg-color;
   background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
   border-top: none;
+
+  .social-links {
+    margin-bottom: 0;
+    gap: 1rem;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+.site-footer-inner {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding-inline: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+
+  @media (max-width: 64em) {
+    padding-inline: 4rem;
+  }
+
+  @media (max-width: 42em) {
+    padding-inline: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
 }
 
 .site-footer-credits {
   display: block;
   color: rgba(255, 255, 255, 0.85);
-  font-size: clamp(0.85rem, 2vw, 0.95rem);
+  font-size: 0.85rem;
 
   a {
     color: #ffffff;
@@ -32,26 +88,4 @@
       transform: translateY(-2px);
     }
   }
-}
-
-/* Sticky Bottom Footer Layout */
-html,
-body {
-  height: 100%;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.page-header,
-.site-footer {
-  flex-shrink: 0;
-}
-
-.main-content {
-  flex: 1 0 auto;
-  width: 100%;
 }

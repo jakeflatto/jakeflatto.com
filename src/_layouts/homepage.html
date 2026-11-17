@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en-US' }}">
+  <head>
+    <meta charset="UTF-8">
+    {% seo %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#048c8c">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    {% include head-custom.html %}
+  </head>
+  <body class="layout-homepage">
+    <main id="content" class="homepage-fullscreen" role="main"
+          {% if page.hero_image %}style="background-image: url('{{ page.hero_image | relative_url }}');"{% endif %}>
+      
+      <div class="hero-bottom-grid">
+        <!-- Bottom-Left: Single wrapper div keeps these 3 stacked vertically -->
+        <div class="hero-identity">
+          <h1 class="hero-name">{{ page.title | default: site.title }}</h1>
+          {% if page.tagline %}
+            <h2 class="hero-tagline">{{ page.tagline }}</h2>
+          {% endif %}
+          <div class="hero-bio">
+            {{ content }}
+          </div>
+          {% include social-group.html footer=true %}
+
+        </div>
+
+        <!-- Bottom-Right: Navigation Links, Social Icons & Credits -->
+        <div class="hero-links-column">
+          <nav class="hero-nav" aria-label="Primary Navigation">
+            {% for item in site.data.nav %}
+              {% unless item.url == "/" %}
+                <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+              {% endunless %}
+            {% endfor %}
+          </nav>
+
+          <div class="hero-footer-row">
+            <span class="hero-credits">
+              © {{ 'now' | date: '%Y' }} {{ site.title }} · Powered by <a href="https://github.com">GitHub Pages</a> and <a href="https://jekyllrb.com">Jekyll</a>
+            </span>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    {% include lightbox.html %}
+  </body>
+</html>

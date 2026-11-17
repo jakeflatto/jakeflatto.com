@@ -1,0 +1,15 @@
+<header class="page-header site-header" role="banner">
+  <div class="site-header-inner">
+    <a href="{{ '/' | relative_url }}" class="site-brand">{{ site.title }}</a>
+
+    <nav class="site-inline-nav" aria-label="Primary Navigation">
+      {% for item in site.data.nav %}
+        {% unless item.url == "/" %}
+          <a href="{{ item.url | relative_url }}" {% if page.url == item.url %}class="active" aria-current="page"{% endif %}>
+            {{ item.title }}
+          </a>
+        {% endunless %}
+      {% endfor %}
+    </nav>
+  </div>
+</header>

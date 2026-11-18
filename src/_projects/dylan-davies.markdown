@@ -2,12 +2,8 @@
 layout: default
 title: Dylan Davies
 description: sad boi alt rock, but make it weirdly orchestral
-image: /assets/images/dylan_davies_logo.png
+image: dd-logo
 ---
-<div class="img-container">
-  {% include image.html image="dd-logo" classes="zoomable" %}
-</div>
-
 {% include social-group.html prefix="dd_" %}
 
 ## What is it?

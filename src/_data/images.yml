@@ -1,3 +1,4 @@
+# Standard Jake Pictures
 purple-headshot:
   src: jake_purple_headshot.jpg
   alt: "Jake's face with purple hair and beard"
@@ -10,11 +11,13 @@ babyface:
 scream-singing:
   src: jake_singing.jpg
   alt: Jake scream singing his heart out
+
+# Dylan Davies
 dd-logo:
   src: dylan_davies_logo.png
   alt: "Dylan Davies logo"
 dd-cover:
-  src: dylan_davies_cover_photo.png
+  src: dylan_davies_cover_photo.jpg
   alt: "Dylan Davies in the wild"
 dd-album-cover:
   src: dylan_davies_album_cover.jpg
@@ -22,9 +25,75 @@ dd-album-cover:
 dd-ep-cover:
   src: dylan_davies_ep_cover.jpg
   alt: "Where We're Going... (Album Cover)"
+
+# HHDC
 hhdc-logo:
   src: hhdc_logo.jpg
   alt: "HHDC logo"
+
+# Theory of Solids
 tos-cover:
   src: theory_of_solids_cover_photo.jpg
   alt: "Theory of Solids in action"
+tos-logo:
+  src: tos_logo.jpg
+  alt: "Theory of Solids logo"
+
+# Interests
+podcasts-cover:
+  src: almost_friday_in_action.jpg
+  alt: "The 'Almost Friday Podcast' in action"
+sketch-cover:
+  src: key_and_peele_town_hall.jpg
+  alt: "Key & Peele's 'Town Hall' Sketch"
+standup-cover:
+  src: george_carlin.jpg
+  alt: "George Carlin in action"
+film-cover:
+  src: north_by_northwest.jpg
+  alt: "North By Northwest's infamous plane scene"
+food-cover:
+  src: uni_rice.jpg
+  alt: "Uni Rice with Tuna Tartare from No Relation in Boston"
+math-cover:
+  src: rainbow_fractal.jpg
+  alt: "A beautifully colored Sierpinski Tetrahedron"
+music-cover:
+  src: beautiful_guitar.jpg
+  alt: "A beautiful electric guitar"
+television-cover:
+  src: bcs_split_face.jpg
+  alt: "Better Call Saul's infamous 'split face' shot"
+travel-cover:
+  src: cinque_terre.jpg
+  alt: "The beautiful waters of Cinque Terre, Italia"
+
+# Film
+cinematography-cover:
+  src: inglourious_basterds.jpg
+  alt: "Inglourious Basterds's infamous 'German 3' shot"
+favorite-films-cover:
+  src: favorite_films.png
+  alt: "Jake's 4 favorite films"
+horror-cover:
+  src: psycho.jpg
+  alt: "Psycho's infamous shower shot"
+screenwriting-cover:
+  src: pulp_fiction_screenplay.jpg
+  alt: "Pulp Fiction draft screenplay cover page"
+
+# Food
+fine-dining-cover:
+  src: single_thread.jpg
+  alt: "A fabulous display from 3-Michelin-Star restaurant 'Single Thread' in Healdsburg, CA"
+hot-dogs-cover:
+  src: pinks_hot_dogs.jpg
+  alt: "A classic chili dog from Pink's Hot Dogs in Los Angeles, CA"
+sushi-cover:
+  src: gilted_sushi.jpg
+  alt: "A gilted sushi roll from Fuji at Ink Block in Boston"
+
+# Television
+game-shows-cover:
+  src: game_changer.jpg
+  alt: "Dropout.tv's Game Changer in action"

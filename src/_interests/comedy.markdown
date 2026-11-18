@@ -2,7 +2,7 @@
 layout: default
 title: Comedy
 description: A termite walks into a bar and asks "is the bar tender here"?
-image: /assets/images/dick_in_a_box.jpg
+image: dick_in_a_box.jpg
 ---
 My number one priority in life is commitment to the bit.
 So, I've long been obsessed with the structure, rules, and bounds of comedy.

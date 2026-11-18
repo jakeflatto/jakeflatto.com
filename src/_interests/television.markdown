@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Television
-image: /assets/images/bcs_split_face.jpg
+image: television-cover
 ---
 ### **Nothing is more important than television, and no one more important than the people who make that television!**
 {: .text-purple}

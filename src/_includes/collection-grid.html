@@ -15,13 +15,15 @@
     {% if item.url != page.url %}
       {% assign path_parts = item.relative_path | split: "/" %}
       {% if path_parts.size == target_depth and item.relative_path contains base_prefix %}
+        {% if item.image %}
+          {% include resolve-image.html image=item.image %}
+        {% endif %}
         <a href="{{ item.url | relative_url }}"
            class="grid-btn{% if item.image %} has-cover{% endif %}"
-           {% if item.image %}style="--cover-img: url('{{ item.image | relative_url }}');"{% endif %}>
+           {% if item.image %}style="--cover-img: url('{{ resolved_img_src | relative_url }}');"{% endif %}>
           <span class="grid-btn-label">{{ item.title | default: item.slug }}</span>
         </a>
       {% endif %}
     {% endif %}
   {% endfor %}
 </div>
-

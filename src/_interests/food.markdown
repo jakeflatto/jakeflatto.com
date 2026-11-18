@@ -2,7 +2,7 @@
 layout: default
 title: Food
 description: Restaurants, recipes, and culinary adventures
-image: /assets/images/uni_rice.jpg
+image: food-cover
 ---
 My number two priority in life (behind <a href="/interests/comedy">commitment to the bit</a>) is finding the perfect hot dog.
 But I would say more generally, I'm quite passionate about food.

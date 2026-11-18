@@ -4,10 +4,6 @@ title: HHDC
 image: /assets/images/hhdc_logo.jpg
 age_restricted: true
 ---
-<div class="img-container">
-  {% include image.html image="hhdc-logo" classes="large" %}
-</div>
-
 ## What the heck is it?  
 The Hollywood Hang Dong Challenge is a silly little movie review platform project I started in 2025. It's mostly a chance for me to practice short-form, creative writing and make countless dick jokes.
 

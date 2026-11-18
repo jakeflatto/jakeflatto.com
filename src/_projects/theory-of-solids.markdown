@@ -1,12 +1,8 @@
 ---
 layout: default
 title: Theory of Solids
-image: /assets/images/tos_logo.jpg
+image: tos-cover
 ---
-<div class="img-container">
-  {% include image.html image="tos-cover" classes="large zoomable" %}
-</div>
-
 {% include social-group.html prefix="tos_" %}
 
 ## What is it?

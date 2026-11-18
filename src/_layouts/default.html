@@ -27,6 +27,16 @@
         <h3 class="page-body-description">{{ page.description }}</h3>
       {% endif %}
 
+      {% assign featured_img = page.image | default: page.hero_image %}
+      {% if featured_img %}
+        {% include resolve-image.html image=featured_img alt=page.image_alt %}
+        <div class="img-container">
+          <img src="{{ resolved_img_src | relative_url }}"
+               alt="{{ resolved_img_alt | default: page.title }}"
+               class="zoomable">
+        </div>
+      {% endif %}
+
       {{ content }}
     </main>
 

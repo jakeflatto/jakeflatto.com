@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Travel
-image: /assets/images/cinque_terre.jpg
+image: travel-cover
 ---
 I've been lucky enough to travel to 2 continents that aren't my own so far, and I hope one day to visit all of them.
 

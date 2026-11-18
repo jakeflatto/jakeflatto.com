@@ -1,0 +1,15 @@
+{%- assign resolved_img_src = "" -%}
+{%- assign resolved_img_alt = "" -%}
+
+{%- if include.image -%}
+  {%- assign img_entry = site.data.images[include.image] -%}
+  {%- assign raw_src = img_entry.src | default: include.image -%}
+  {%- assign resolved_img_alt = img_entry.alt | default: include.alt | default: "" -%}
+
+  {%- assign first_char = raw_src | slice: 0, 1 -%}
+  {%- if raw_src contains "://" or first_char == "/" -%}
+    {%- assign resolved_img_src = raw_src -%}
+  {%- else -%}
+    {%- assign resolved_img_src = "/assets/images/" | append: raw_src -%}
+  {%- endif -%}
+{%- endif -%}

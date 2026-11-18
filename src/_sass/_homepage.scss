@@ -9,33 +9,51 @@
   justify-content: flex-end;
   padding: clamp(1.5rem, 3.5vw, 2.5rem) clamp(1.5rem, 3.5vw, 3rem);
   background-color: #111827;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   color: #ffffff;
+}
 
-  /* Gradient scrim with pointer-events: none so links remain clickable */
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
+/* Shared Full-Bleed Layer Positioning (Background Image & Gradient Scrim) */
+.homepage-bg-img,
+.homepage-fullscreen::before {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.homepage-bg-img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  object-fit: cover;
+  object-position: center 67%;
+  opacity: 0;
+  transition: opacity 1.8s ease-out;
+  z-index: 0;
+
+  &.is-loaded {
+    opacity: 1;
+  }
+}
+
+/* Gradient scrim sits above .homepage-bg-img (z-index: 0) and below .hero-bottom-grid (z-index: 2) */
+.homepage-fullscreen::before {
+  content: "";
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 15, 25, 0.05) 0%,
+    rgba(10, 15, 25, 0.25) 45%,
+    rgba(10, 15, 25, 0.88) 100%
+  );
+
+  @media (max-width: 768px) {
     background: linear-gradient(
       180deg,
-      rgba(10, 15, 25, 0.05) 0%,
-      rgba(10, 15, 25, 0.25) 45%,
-      rgba(10, 15, 25, 0.88) 100%
+      rgba(10, 15, 25, 0.82) 0%,
+      rgba(10, 15, 25, 0.15) 45%,
+      rgba(10, 15, 25, 0.85) 100%
     );
-    pointer-events: none;
-    z-index: 0;
-
-    @media (max-width: 768px) {
-      background: linear-gradient(
-        180deg,
-        rgba(10, 15, 25, 0.82) 0%,
-        rgba(10, 15, 25, 0.15) 45%,
-        rgba(10, 15, 25, 0.85) 100%
-      );
-    }
   }
 }
 
@@ -201,13 +219,25 @@ $hero-stagger-items: (
   @for $i from 1 through length($hero-stagger-items) {
     #{nth($hero-stagger-items, $i)} {
       opacity: 0;
-      animation: cascadeReveal 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+      animation: cascadeReveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
       animation-delay: #{0.1 + ($i - 1) * 0.12}s;
+    }
+  }
 
-      @media (prefers-reduced-motion: reduce) {
-        opacity: 1;
-        animation: none;
-      }
+  @media (prefers-reduced-motion: reduce) {
+    .homepage-bg-img {
+      opacity: 1;
+      transition: none;
+    }
+
+    .hero-name,
+    .hero-tagline,
+    .hero-bio,
+    .hero-identity .social-links,
+    .hero-nav,
+    .hero-footer-row {
+      opacity: 1;
+      animation: none;
     }
   }
 }

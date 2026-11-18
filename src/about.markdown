@@ -5,6 +5,7 @@ permalink: /about/
 breadcrumb: "About"
 ---
 <div class="img-container">
+  {% include image.html image="purple-headshot" classes="zoomable" %}
   {% include image.html image="parasailing" classes="zoomable" %}
   {% include image.html image="babyface" classes="zoomable" %}
   {% include image.html image="scream-singing" classes="zoomable" %}

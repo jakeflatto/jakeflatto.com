@@ -5,13 +5,46 @@
     {% seo %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#048c8c">
+    {% assign hero_img_input = page.hero_image | default: page.image %}
+    {% if hero_img_input %}
+      {% include resolve-image.html image=hero_img_input %}
+      <link rel="preload" as="image" href="{{ resolved_img_src | relative_url }}" fetchpriority="high">
+    {% endif %}
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     {% include head-custom.html %}
   </head>
   <body class="layout-homepage">
-    <main id="content" class="homepage-fullscreen" role="main"
-          {% if page.hero_image %}style="background-image: url('{{ page.hero_image | relative_url }}');"{% endif %}>
-      
+    <main id="content" class="homepage-fullscreen" role="main">
+      {% if hero_img_input %}
+        <img src="{{ resolved_img_src | relative_url }}"
+             alt=""
+             class="homepage-bg-img"
+             fetchpriority="high"
+             decoding="async"
+             aria-hidden="true">
+        <script>
+          (function () {
+            const bg = document.querySelector(".homepage-bg-img");
+            if (!bg) return;
+
+            function revealBg() {
+              requestAnimationFrame(function () {
+                requestAnimationFrame(function () {
+                  bg.classList.add("is-loaded");
+                });
+              });
+            }
+
+            if (bg.complete) {
+              revealBg();
+            } else {
+              bg.addEventListener("load", revealBg, { once: true });
+            }
+          })();
+        </script>
+      {% endif %}
+
+
       <div class="hero-bottom-grid">
         <!-- Bottom-Left: Single wrapper div keeps these 3 stacked vertically -->
         <div class="hero-identity">

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Cinematography
-image: /assets/images/inglourious_basterds.jpg
+image: cinematography-cover
 ---
 It's the cinematography page! Content coming soon.
 {% include footage-not-found.html %}

@@ -35,8 +35,9 @@
   background-color: $header-bg-color;
   border-radius: 0.3rem;
 }
-
-.main-content .purple-block {
-  background-color: $header-bg-color-secondary;
-  border-radius: 0.3rem;
+.main-content .quote-block {
+  background-color: #048c8c40;
+  border-radius: 1rem;
+  border: 0.3rem solid $header-bg-color-secondary;
+  padding: 1rem;
 }

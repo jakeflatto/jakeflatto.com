@@ -40,15 +40,9 @@ tos-logo:
   alt: "Theory of Solids logo"
 
 # Interests
-podcasts-cover:
-  src: almost_friday_in_action.jpg
-  alt: "The 'Almost Friday Podcast' in action"
-sketch-cover:
-  src: key_and_peele_town_hall.jpg
-  alt: "Key & Peele's 'Town Hall' Sketch"
-standup-cover:
-  src: george_carlin.jpg
-  alt: "George Carlin in action"
+comedy-cover:
+  src: dick_in_a_box.jpg
+  alt: "The Lonely Island's 'Dick in a Box' music video"
 film-cover:
   src: north_by_northwest.jpg
   alt: "North By Northwest's infamous plane scene"
@@ -67,6 +61,17 @@ television-cover:
 travel-cover:
   src: cinque_terre.jpg
   alt: "The beautiful waters of Cinque Terre, Italia"
+
+# Comedy 
+podcasts-cover:
+  src: almost_friday_in_action.jpg
+  alt: "The 'Almost Friday Podcast' in action"
+sketch-cover:
+  src: key_and_peele_town_hall.jpg
+  alt: "Key & Peele's 'Town Hall' Sketch"
+standup-cover:
+  src: george_carlin.jpg
+  alt: "George Carlin in action"
 
 # Film
 cinematography-cover:
@@ -94,6 +99,44 @@ sushi-cover:
   alt: "A gilted sushi roll from Fuji at Ink Block in Boston"
 
 # Television
+dramedies-cover:
+  src: shrinking.jpg
+  alt: "A masterful shot from Apple TV's 'Shrinking'"
+favorite-shows-cover:
+  src: favorite_tv_shows.png
+  alt: "A few of my favorite TV shows (that start with B)"
 game-shows-cover:
   src: game_changer.jpg
   alt: "Dropout.tv's Game Changer in action"
+
+# Travel
+barcelona-cover:
+  src: barcelona_tapas.jpg
+  alt: "Traditional tapas in Barcelona"
+berlin-cover:
+  src: berlin.jpg
+  alt: "The Berlin TV tower"
+cabo-cover:
+  src: cabo_beach.jpg
+  alt: "A beach at dusk in Cabo San Lucas"
+dublin-cover:
+  src: dublin.jpg
+  alt: "The Giants Garden in Dublin"
+edinburgh-cover:
+  src: edinburgh.jpg
+  alt: "Statue of the Duke of Wellington on Princes street in Edinburgh"
+florence-cover:
+  src: florence.jpg
+  alt: "A scenic vista over the Florence city center"
+italy-cover:
+  src: italy_2023.jpg
+  alt: "A collage of 4 Italian cities I visited in 2023"
+new-zealand-cover:
+  src: hobbiton.jpg
+  alt: "Double rainbow all the way across the New Zealand sky"
+puerto-vallarta-cover:
+  src: puerto_vallarta.jpg
+  alt: "The greatest sunset I've ever seen in Puerto Vallarta"
+venice-cover:
+  src: venice_2019.jpg
+  alt: "A Venetian dusk as seen from a gondola"

@@ -98,6 +98,26 @@ sushi-cover:
   src: gilted_sushi.jpg
   alt: "A gilted sushi roll from Fuji at Ink Block in Boston"
 
+# Math
+abstract-algebra-cover:
+  src: abstract_algebra.jpg
+  alt: "A multiplication table for integers modulo 12"
+galois-theory-cover:
+  src: galois_theory.jpg
+  alt: "A quote from Evariste Galois alongside a classic Galois Theory diagram"
+group-theory-cover:
+  src: group_theory.jpg
+  alt: "A beautiful rubik's cube"
+lie-theory-cover:
+  src: lie_theory.jpg
+  alt: "The classic picture representing a Lie Group"
+set-theory-cover:
+  src: set_theory.jpg
+  alt: "A diagram of the lower ordinal numbers"
+topology-cover:
+  src: topology.jpg
+  alt: "A visual representation of a coffee cup morphing into a donut"
+
 # Television
 dramedies-cover:
   src: shrinking.jpg

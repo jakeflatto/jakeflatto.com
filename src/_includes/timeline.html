@@ -1,0 +1,104 @@
+{% assign raw_jobs = include.data | default: site.data.work_history %}
+{% assign end_now = include.end_at_now | default: true %}
+
+{% if raw_jobs and raw_jobs.size > 0 %}
+  {% assign month_names = ",Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec" | split: "," %}
+
+  {%- comment -%} Find earliest and latest year across all entries {%- endcomment -%}
+  {% assign min_year = 9999 %}
+  {% assign max_year = 0 %}
+
+  {% for job in raw_jobs %}
+    {% assign y_start = job.year_started | plus: 0 %}
+    {% if y_start < min_year %}
+      {% assign min_year = y_start %}
+    {% endif %}
+    {% if y_start > max_year %}
+      {% assign max_year = y_start %}
+    {% endif %}
+
+    {% if job.year_ended %}
+      {% assign y_end = job.year_ended | plus: 0 %}
+      {% if y_end > max_year %}
+        {% assign max_year = y_end %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+
+  {% if end_now %}
+    {% assign current_year = "now" | date: "%Y" | plus: 0 %}
+    {% if current_year > max_year %}
+      {% assign max_year = current_year %}
+    {% endif %}
+  {% endif %}
+
+  {%- comment -%}
+    Minimum-tick 3-year span:
+    Start directly at min_year, and round (max_year + 1) up to the next multiple of 3 above min_year
+    so every month within max_year (e.g. Nov 2026) sits cleanly before the final tick (Jan 2027).
+  {%- endcomment -%}
+  {% assign axis_start_year = min_year %}
+  {% assign target_end = max_year | plus: 1 %}
+  {% assign raw_span = target_end | minus: axis_start_year %}
+  {% if raw_span < 3 %}
+    {% assign total_years = 3 %}
+  {% else %}
+    {% assign rem = raw_span | modulo: 3 %}
+    {% if rem == 0 %}
+      {% assign total_years = raw_span %}
+    {% else %}
+      {% assign add_years = 3 | minus: rem %}
+      {% assign total_years = raw_span | plus: add_years %}
+    {% endif %}
+  {% endif %}
+
+  {% assign axis_end_year = axis_start_year | plus: total_years %}
+  {% assign total_months = total_years | times: 12 %}
+  {% assign axis_start_months = axis_start_year | times: 12 | plus: 1 %}
+  {% assign tick_count = total_years | divided_by: 3 %}
+
+  {% assign sorted_jobs = raw_jobs | sort: "year_started" %}
+
+  <div class="work-timeline" role="region" aria-label="Work History Timeline">
+    <div class="timeline-track">
+      <div class="timeline-line"></div>
+
+      {%- comment -%} 3-Year Axis Tick Marks & Labels {%- endcomment -%}
+      {% for t in (0..tick_count) %}
+        {% assign tick_year = t | times: 3 | plus: axis_start_year %}
+        {% assign tick_pct = t | times: 100.0 | divided_by: tick_count %}
+        <div class="timeline-tick" style="left: {{ tick_pct }}%;">
+          <span class="tick-mark"></span>
+          <span class="tick-label">{{ tick_year }}</span>
+        </div>
+      {% endfor %}
+
+      {%- comment -%} Job Milestone Nodes {%- endcomment -%}
+      {% for job in sorted_jobs %}
+        {% assign m_idx = job.month_started | plus: 0 %}
+        {% assign y_idx = job.year_started | plus: 0 %}
+        {% assign job_months = y_idx | times: 12 | plus: m_idx %}
+        {% assign offset_months = job_months | minus: axis_start_months %}
+        {% assign pct = offset_months | times: 100.0 | divided_by: total_months %}
+        {% assign month_label = month_names[m_idx] %}
+
+        <div class="timeline-node{% if pct < 18 %} align-left{% elsif pct > 82 %} align-right{% endif %}"
+             style="left: {{ pct }}%;">
+          <button type="button"
+                  class="timeline-dot"
+                  aria-label="{{ job.position }} at {{ job.employer }}, started {{ month_label }} {{ y_idx }}">
+          </button>
+
+          <div class="timeline-tooltip" role="tooltip">
+            <div class="tooltip-date">{{ month_label }} {{ y_idx }}{% if job.location %} · {{ job.location }}{% endif %}</div>
+            <div class="tooltip-role">{{ job.position }}</div>
+            <div class="tooltip-employer">{{ job.employer }}</div>
+            {% if job.summary %}
+              <p class="tooltip-summary">{{ job.summary }}</p>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}

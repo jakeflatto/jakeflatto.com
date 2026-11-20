@@ -65,3 +65,6 @@ collections:
   interests:
     output: true
     permalink: /interests/:path/
+  work:
+    output: true
+    permalink: /work/side-projects/:path/

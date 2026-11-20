@@ -1,0 +1,49 @@
+- month_started: 12
+  year_started: 2015
+  position: Product Manager
+  employer: ZEFR, Inc
+  location: Venice, CA
+  summary: Built social media content search within the BrandID Influencers platform for brands trying to find their next social representative.
+
+- month_started: 7
+  year_started: 2017
+  position: Data Product Manager
+  employer: Awesomeness, Inc.
+  location: Santa Monica, CA
+  summary: Built social video performance analytics products within the proprietary metadata management system and Redshift data warehouse for a media production company.
+
+- month_started: 8
+  year_started: 2018
+  position: Data Product Manager
+  employer: Revenue.io
+  location: Sherman Oaks, CA
+  summary: Designed a structured permissions system for the RingDNA Admin product for sales leaders to manage their team's usage of the proprietary RingDNA sales dialer.
+
+- month_started: 5
+  year_started: 2019
+  position: Senior Product Manager
+  employer: Wayfair, LLC
+  location: Boston, MA
+  summary: Redesigned the New Product Option creation tools for Wayfair's network of over 20K suppliers.
+
+- month_started: 4
+  year_started: 2021
+  position: Software Engineer II/III
+  employer: Wayfair, LLC
+  location: Boston, MA
+  summary: Designed an event-driven pipeline to funnel cost change recommendations from internal business analysts to Wayfair's network of over 20K suppliers.
+
+- month_started: 4
+  year_started: 2024
+  position: Tech Lead
+  employer: Wayfair, LLC
+  location: Boston, MA
+  summary: Led a team of 7 contractors in building out a new system for managing promotional pricing for the retail catalogs of Wayfair's network of over 20K suppliers.
+
+- month_started: 9
+  year_started: 2025
+  position: Software Engineer III
+  employer: Lightspeed, Inc.
+  location: Montreal, QC, CA (Remote)
+  summary: Integrated experiences from Lightspeed's proprietary wholesale network offering into two proprietary Retail Point-of-Sale systems.
+

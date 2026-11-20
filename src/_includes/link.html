@@ -1,4 +1,5 @@
 {%- assign href = site.data.links[include.name] -%}
 {%- assign text = include.text | default: "Link" -%}
 {%- assign target = include.target | default: "self" -%}
-<a target="_{{ target }}" href="{{ href }}" {% if target == "blank" %}rel="noopener noreferrer"{% endif %}>{{ text }}</a>
+{%- assign classes = include.classes | default "" -%}
+<a target="_{{ target }}" href="{{ href }}" {% if target == "blank" %}rel="noopener noreferrer"{% endif %} class="{{ classes }}">{{ text }}</a>

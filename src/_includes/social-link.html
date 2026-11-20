@@ -5,9 +5,7 @@
 
 {% if link_url and icon %}
 <a href="{{ link_url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ icon.label }}" title="{{ icon.label }}">
-  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-    <path d="{{ icon.path }}"/>
-  </svg>
+  {% include social-icon.html platform=platform %}
 </a>
 {% endif %}
 
